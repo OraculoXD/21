@@ -4,7 +4,7 @@ import java.util.Scanner;
 /**
  * Escreva uma descrição da classe Blackjack aqui.
  * 
- * @author marco.mangan@pucrs.br 
+ * @author Gabriel Almeida
  * @version (um número da versão ou uma data)
  */
 public class Blackjack
