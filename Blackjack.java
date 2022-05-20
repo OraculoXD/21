@@ -81,7 +81,7 @@ public class Blackjack
         else
             j3 = 0;
 
-        tc= somarCartas(c1, c2, c3);
+        tc = somarCartas(c1, c2, c3);
         tj = somarCartas(j1, j2, j3);
 
         System.out.printf("COMPUTADOR%n");
@@ -104,16 +104,17 @@ public class Blackjack
                 System.out.println("Ganhou! (Oponente excedeu 21)");
             } else {
                 if (tj > tc) {
-                    System.out.println("Ganhou! (Mais perto de 21)");
+                    System.out.println("Ganhou! (Mais perto de 21)");                    
                 } else {
                     if (tj < tc) {
                         System.out.println("Perdeu! (Oponente mais perto de 21)");
                     } else {
-                        System.out.println("Empate! (Mesmo valor)");
+                        System.out.println("Empate! (Mesmo valor)");                    
                     }
                 }
             }
         }
+
         sc.close();
     }
-}    
+}
