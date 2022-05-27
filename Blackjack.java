@@ -4,21 +4,20 @@ import java.util.Scanner;
 /**
  * Escreva uma descrição da classe Blackjack aqui.
  * 
- * @author Gabriel Almeida
+ * @author marco.mangan@pucrs.br 
  * @version (um número da versão ou uma data)
  */
 public class Blackjack
 {
     public static void mostrarCartas(final String participante,
-                                    final int[] c, final int tc) {
+    final int[] cs, final int tcs) {
         System.out.printf("%s%n", participante);
-        for (int i = 1; i < c.length; i++) {   
-            System.out.printf("Carta %d: %s%n", i, face(c[i]));
+        for (int i = 1; i < cs.length; i++) {   
+            System.out.printf("Carta %d: %s%n", i, face(cs[i]));
         }
-        System.out.printf("Total  : %d%n", tc);
+        System.out.printf("Total  : %d%n", tcs);
     }
-    
-    
+
     public static int gerarCarta(final Random r) {
         return 1 + r.nextInt(13);
     }
@@ -29,14 +28,14 @@ public class Blackjack
         int n = r.nextInt(4);
         return naipes[n];
     }    
-       
+
     public static final String[] faces = {"X", "A",  
-                            "2", "3", "4", 
-                            "5", "6", "7", 
-                            "8", "9", "10",
-                            "J", "Q", "K"
-                        };
-                        
+            "2", "3", "4", 
+            "5", "6", "7", 
+            "8", "9", "10",
+            "J", "Q", "K"
+        };
+
     public static String face(final int c) {
         return faces[c];
     }
@@ -52,7 +51,7 @@ public class Blackjack
         }
         return s;
     }    
-    
+
     public static void main(String[] args) {
         Scanner sc;
         Random r;
@@ -61,13 +60,13 @@ public class Blackjack
         int tc, tj;
         String resposta;
         boolean hitme;
-    
+
         sc = new Scanner(System.in);
         r = new Random();
         // alocação do vetor/arranjo
         c = new int[4]; // c[0] não será utilizada
         j = new int[3]; // j[0] não será utilizada
-        
+
         for (int i = 1; i < c.length; i++) {
             c[i] = gerarCarta(r);
         }
